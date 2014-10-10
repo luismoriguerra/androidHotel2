@@ -17,8 +17,8 @@ import com.mejorandola.ejemplo.fragments.SendDataDialogFragment;
 import com.mejorandola.ejemplo.models.Room;
 
 public class RoomDetailActivity extends FragmentActivity implements SendDataDialogFragment.DialogListener {
-	public final static String ROOM_TYPE = "tipo de habitaci—n";
-	public final static String ROOM_NUMBER = "nœmero de habitaci—n";
+	public final static String ROOM_TYPE = "tipo de habitacion";
+	public final static String ROOM_NUMBER = "numero de habitacion";
 	public final static String DIALOG_TAG = "dialogo";
 	
 	private Room room;	
@@ -70,7 +70,7 @@ public class RoomDetailActivity extends FragmentActivity implements SendDataDial
 	        case R.id.action_share:
 	        	Intent i = new Intent();
 	        	i.setAction(Intent.ACTION_SEND);
-	        	i.putExtra(Intent.EXTRA_TEXT, "Me gust— la habitaci—n " + room.getRoomNumber() + " tipo " + room.getRoomType());	        	
+	        	i.putExtra(Intent.EXTRA_TEXT, "Me gusta la habitacion " + room.getRoomNumber() + " tipo " + room.getRoomType());	        	
 	        	i.putExtra(Intent.EXTRA_STREAM, Uri.parse("android.resource://" + getPackageName() + "/drawable/" + R.drawable.hotel1));
 	        	i.setType("image/jpeg");
 	        	startActivity(Intent.createChooser(i, getResources().getText(R.string.msg_share)));	        	

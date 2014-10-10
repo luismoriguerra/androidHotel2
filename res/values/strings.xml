@@ -37,10 +37,17 @@
 		<item>102</item>
 		<item>203</item>
 		<item>205</item>
+		<item>205</item>
+		<item>205</item>
+		<item>205</item>
+		<item>205</item>
     </string-array>    
 
     <string-array name="array_rooms_luxury">
 		<item>301</item>
+		<item>302</item><item>302</item>
+		<item>302</item>
+		<item>302</item>
 		<item>302</item>
     </string-array>        
 

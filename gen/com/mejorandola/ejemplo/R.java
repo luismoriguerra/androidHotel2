@@ -36,23 +36,27 @@ public final class R {
         public static final int rating_not_important=0x7f020006;
     }
     public static final class id {
-        public static final int action_dialog=0x7f09000c;
-        public static final int action_fav=0x7f090009;
-        public static final int action_share=0x7f09000a;
+        public static final int action_dialog=0x7f09000f;
+        public static final int action_fav=0x7f09000c;
+        public static final int action_share=0x7f09000d;
         public static final int img_header=0x7f090000;
+        public static final int img_row=0x7f090009;
         public static final int seekBar_front_desk=0x7f090007;
         public static final int spinner_rate=0x7f090002;
-        public static final int three_dots_item=0x7f09000b;
+        public static final int three_dots_item=0x7f09000e;
         public static final int toggle_recommendation=0x7f090004;
         public static final int txtMsgFront=0x7f090005;
         public static final int txt_msg_front_desk_0=0x7f090006;
         public static final int txt_msg_front_desk_100=0x7f090008;
         public static final int txt_msg_rate=0x7f090001;
         public static final int txt_msg_recommendation=0x7f090003;
+        public static final int txt_row_subtitle=0x7f09000b;
+        public static final int txt_row_title=0x7f09000a;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
         public static final int activity_room_list=0x7f030001;
+        public static final int list_row=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f080000;
