@@ -51,32 +51,35 @@ public final class R {
         public static final int rating_not_important=0x7f020011;
     }
     public static final class id {
-        public static final int action_dialog=0x7f050013;
-        public static final int action_fav=0x7f050010;
-        public static final int action_share=0x7f050011;
+        public static final int action_dialog=0x7f050014;
+        public static final int action_fav=0x7f050011;
+        public static final int action_share=0x7f050012;
+        public static final int grid_rooms=0x7f05000d;
         public static final int img_header=0x7f050004;
-        public static final int img_row=0x7f05000d;
+        public static final int img_row=0x7f05000e;
         public static final int ptr_content=0x7f050000;
         public static final int ptr_progress=0x7f050003;
         public static final int ptr_text=0x7f050002;
         public static final int ptr_text_opaque_bg=0x7f050001;
         public static final int seekBar_front_desk=0x7f05000b;
         public static final int spinner_rate=0x7f050006;
-        public static final int three_dots_item=0x7f050012;
+        public static final int three_dots_item=0x7f050013;
         public static final int toggle_recommendation=0x7f050008;
         public static final int txtMsgFront=0x7f050009;
         public static final int txt_msg_front_desk_0=0x7f05000a;
         public static final int txt_msg_front_desk_100=0x7f05000c;
         public static final int txt_msg_rate=0x7f050005;
         public static final int txt_msg_recommendation=0x7f050007;
-        public static final int txt_row_subtitle=0x7f05000f;
-        public static final int txt_row_title=0x7f05000e;
+        public static final int txt_row_subtitle=0x7f050010;
+        public static final int txt_row_title=0x7f05000f;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int activity_room_list=0x7f030001;
-        public static final int default_header=0x7f030002;
-        public static final int list_row=0x7f030003;
+        public static final int activity_room_grid=0x7f030001;
+        public static final int activity_room_list=0x7f030002;
+        public static final int default_header=0x7f030003;
+        public static final int grid_element=0x7f030004;
+        public static final int list_row=0x7f030005;
     }
     public static final class menu {
         public static final int main=0x7f0a0000;

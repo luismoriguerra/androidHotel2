@@ -4,30 +4,32 @@ import java.util.ArrayList;
 
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher;
 import uk.co.senab.actionbarpulltorefresh.library.PullToRefreshAttacher.OnRefreshListener;
-
-import android.app.ListActivity;
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.ListView;
+import android.widget.GridView;
 
 import com.mejorandola.ejemplo.data.CustomAdapter;
 import com.mejorandola.ejemplo.models.Room;
 
-public class RoomListActivity extends ListActivity  implements OnRefreshListener {
+public class RoomGridActivity extends Activity  implements OnRefreshListener {
 	
 	private PullToRefreshAttacher pull_to_refresh_attacher;
 	
+	private GridView grid;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_room_list);
+		 
+		setContentView(R.layout.activity_room_grid);
 		
-		ListView list = getListView();
+		grid  = (GridView)findViewById(R.id.grid_rooms);
+		
 		ArrayList<Room> rooms = new ArrayList<Room>();
 		pull_to_refresh_attacher = PullToRefreshAttacher.get(this);  
-		pull_to_refresh_attacher.addRefreshableView(list, this);
+		pull_to_refresh_attacher.addRefreshableView(grid, this);
 		
 		for(String room : getResources().getStringArray(R.array.array_rooms_standard)){
 			Room one_room = new Room(room, Room.STANDARD_ROOM);
@@ -39,8 +41,8 @@ public class RoomListActivity extends ListActivity  implements OnRefreshListener
 			rooms.add(one_room);
 		}
 		
-		CustomAdapter adapter = new CustomAdapter(this, rooms,true);
-		setListAdapter(adapter);
+		CustomAdapter adapter = new CustomAdapter(this, rooms,false);
+		grid.setAdapter(adapter);
 		
 	}
 

@@ -2,6 +2,7 @@ package com.mejorandola.ejemplo.data;
 
 import java.util.ArrayList;
 
+import android.R.bool;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,12 +19,15 @@ public class  CustomAdapter extends ArrayAdapter<Room> {
 	
 	ArrayList<Room> data;
 	LayoutInflater inflater;
+	
+	boolean is_list;
 
-	public CustomAdapter(Context context, ArrayList<Room> objects) {
+	public CustomAdapter(Context context, ArrayList<Room> objects,boolean is_list) {
 		super(context, -1, objects);
 		// TODO Auto-generated constructor stub
 		this.data = objects;
 		this.inflater = LayoutInflater.from(context);
+		this.is_list = is_list;
 	}
 	
 	
@@ -46,8 +50,11 @@ public class  CustomAdapter extends ArrayAdapter<Room> {
 		img_resource = R.drawable.hotel2;
 		
 	}
+	
+	int layout = is_list? R.layout.list_row : R.layout.grid_element;
+	 
 	if(convertView == null){
-		convertView = inflater.inflate(R.layout.list_row, null);
+		convertView = inflater.inflate(layout, null);
 		
 		holder = new ViewHolder();
 		holder.img = (ImageView)convertView.findViewById(R.id.img_row);
